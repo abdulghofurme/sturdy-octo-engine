@@ -46,3 +46,35 @@ article li {
   margin: revert;
   padding: revert;
 }
+
+.ticket__types {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ticket__types li {
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  margin: 0 4px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.ticket__types li:first-of-type {
+  margin-left: 0;
+}
+
+.ticket__types li:last-of-type {
+  margin-right: 0;
+}
+
+.ticket__types li button {
+  margin: 8px 4px 0;
+  padding: 4px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+}

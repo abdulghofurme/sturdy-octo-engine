@@ -20,6 +20,11 @@
               Tickets are running log! Only {{tickets}} left.
             </p>
             <p v-else>Sorry. We're sold out.</p>
+            <ul>
+              <li v-for="(detail, index) in details" :key="detail">
+                {{index}} {{detail}}
+              </li>
+            </ul>
           </div>
           <!-- <img v-bind:src="image" alt="" srcset="" /> -->
           <img :src="image" :width="tickets *50" alt="" srcset="" />

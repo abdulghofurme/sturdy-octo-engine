@@ -9,7 +9,10 @@
     <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
   </head>
   <body>
-    <div id="app">{{ title }}</div>
+    <div id="app">
+	<h1>{{ title.split('').join('-') }}</h1>
+	<p>There are {{ tickets === 0 ? 'no' : tickets }} left.</p>
+    </div>
     <script src="main.js"></script>
     <script>
       const mountedApp = app.mount("#app");

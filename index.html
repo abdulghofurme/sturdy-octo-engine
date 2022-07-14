@@ -29,10 +29,15 @@
               </li>
             </ul>
             <!-- <button type="button" v-on:click="cart++">Add ticket</button> -->
-            <button type="button" @click="cart++">Add ticket</button>
+            <button type="button" @click="updateCart()" v-if="tickets > 0">
+              Add ticket
+            </button>
+            <button type="'button" @click="updateCart(2)" v-if="tickets >= 2">
+              Buy couple
+            </button>
           </div>
           <!-- <img v-bind:src="image" alt="" srcset="" /> -->
-          <img :src="image" :width="tickets *50" alt="" srcset="" />
+          <img :src="image" alt="" srcset="" />
         </article>
       </main>
     </div>

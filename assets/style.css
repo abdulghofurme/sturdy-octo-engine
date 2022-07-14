@@ -3,6 +3,9 @@
   padding: 0;
 }
 
+ul {
+}
+
 body {
   padding: 16px;
 }
@@ -14,6 +17,18 @@ header {
   font-size: 30px;
   color: white;
   text-align: center;
+  position: relative;
+  border-radius: 8px;
+}
+
+header > div {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 main {
@@ -24,4 +39,10 @@ article {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+article ul,
+article li {
+  margin: revert;
+  padding: revert;
 }

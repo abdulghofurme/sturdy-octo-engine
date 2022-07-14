@@ -10,7 +10,10 @@
   </head>
   <body>
     <div id="app">
-      <header>Online Events</header>
+      <header>
+        Online Events
+        <div>Tickets ({{cart}})</div>
+      </header>
       <main>
         <article>
           <div>
@@ -22,9 +25,11 @@
             <p v-else>Sorry. We're sold out.</p>
             <ul>
               <li v-for="(detail, index) in details" :key="detail">
-                {{index}} {{detail}}
+                {{index}} - {{detail}}
               </li>
             </ul>
+            <!-- <button type="button" v-on:click="cart++">Add ticket</button> -->
+            <button type="button" @click="cart++">Add ticket</button>
           </div>
           <!-- <img v-bind:src="image" alt="" srcset="" /> -->
           <img :src="image" :width="tickets *50" alt="" srcset="" />

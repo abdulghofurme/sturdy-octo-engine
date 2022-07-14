@@ -1,1 +1,7 @@
-console.log('Test');
+const app = Vue.createApp({
+  data() {
+    return {
+      title: "Comedy events",
+    };
+  },
+});

@@ -9,7 +9,10 @@
     <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
   </head>
   <body>
-    <div>Hello friends</div>
+    <div id="app">{{ title }}</div>
     <script src="main.js"></script>
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
   </body>
 </html>

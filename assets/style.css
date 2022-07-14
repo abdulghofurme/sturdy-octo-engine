@@ -1,2 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  padding: 16px;
+}
+
+header {
+  display: block;
+  background: grey;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+main {
+  margin: 16px 0;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

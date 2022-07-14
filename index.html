@@ -10,8 +10,17 @@
   </head>
   <body>
     <div id="app">
-	<h1>{{ title.split('').join('-') }}</h1>
-	<p>There are {{ tickets === 0 ? 'no' : tickets }} left.</p>
+      <header>Online Events</header>
+      <main>
+        <article>
+          <div>
+            <h2>{{ title.split('').join('-') }}</h2>
+            <p>There are {{ tickets === 0 ? 'no' : tickets }} left.</p>
+          </div>
+          <!-- <img v-bind:src="image" alt="" srcset="" /> -->
+          <img :src="image" :width="tickets *50" alt="" srcset="" />
+        </article>
+      </main>
     </div>
     <script src="main.js"></script>
     <script>

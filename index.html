@@ -35,10 +35,11 @@
             <p>Your message: {{message}}</p>
             <ul class="ticket__types">
               <ticket-details
-                v-for="type of ticketTypes"
-                :type="type"
+                v-for="type in ticketTypes"
                 :key="type.id"
-                :updateImage="updateImage"
+                :name="type.name"
+                :image="type.image"
+                :tickets="type.tickets"
               />
             </ul>
           </div>

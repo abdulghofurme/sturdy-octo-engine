@@ -52,7 +52,13 @@
             </ul>
           </div>
           <!-- <img v-bind:src="image" alt="" srcset="" /> -->
-          <img :src="image" alt="" srcset="" />
+          <img
+            :src="image"
+            class="item__image"
+            :class="{'sold-out': soldOut, 'hidden': hidden}"
+            alt=""
+            srcset=""
+          />
         </article>
       </main>
     </div>

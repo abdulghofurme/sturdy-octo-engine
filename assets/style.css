@@ -47,6 +47,13 @@ article li {
   padding: revert;
 }
 
+.item__image.sold-out {
+  opacity: 0.4;
+}
+.hidden {
+  display: none;
+}
+
 .ticket__types {
   list-style-type: none;
   margin: 0;

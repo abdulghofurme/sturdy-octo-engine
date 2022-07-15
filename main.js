@@ -24,6 +24,8 @@ const app = Vue.createApp({
           image: faker.image.image(200, 200, true),
         },
       ],
+      soldOutClass: 'sold-out',
+      hiddenClass: 'hidden' 
     };
   },
   methods: {

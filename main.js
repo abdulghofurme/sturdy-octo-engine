@@ -2,11 +2,10 @@ const app = Vue.createApp({
   data() {
     return {
       title: "Comedy events",
-      tickets: 20,
       image: faker.image.image(200, 200, true),
       details: ["Funny comics", "Mime artistry", "Satire", "Sketches"],
+      tickets: 20,
       cart: 0,
-      hidden: false,
       ticketTypes: [
         {
           id: "bronze",
@@ -24,8 +23,10 @@ const app = Vue.createApp({
           image: faker.image.image(200, 200, true),
         },
       ],
-      soldOutClass: 'sold-out',
-      hiddenClass: 'hidden' 
+      soldOutClass: "sold-out",
+      hiddenClass: "hidden",
+      hidden: false,
+      message: "",
     };
   },
   methods: {

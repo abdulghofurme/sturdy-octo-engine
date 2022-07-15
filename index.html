@@ -31,10 +31,13 @@
                 {{index}} - {{detail}}
               </li>
             </ul>
+            <input v-model="message" placeholder="Message" />
+            <p>Your message: {{message}}</p>
             <ul class="ticket__types">
               <li
                 v-for="type of ticketTypes"
                 @mouseover="updateImage(type.image)"
+                :key="type.id"
               >
                 <div>{{ type.name }}</div>
                 <!-- <button type="button" v-on:click="cart++">Add ticket</button> -->

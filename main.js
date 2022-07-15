@@ -34,4 +34,9 @@ const app = Vue.createApp({
       this.image = image;
     },
   },
+  computed: {
+    soldOut() {
+      return this.tickets === 0;
+    },
+  },
 });

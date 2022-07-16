@@ -12,12 +12,16 @@ app.component("ticket-details", {
   },
   methods: {
     addTickets(num = 1) {
+      this.$emit("buyTickets", this.ticketsToBuy, this.name);
       this.ticketsLeft -= num;
       this.ticketsToBuy = 0;
     },
+    updateImage(image) {
+      this.$emit("updateImage", image);
+    },
   },
   template: `
-  <li>
+  <li @mouseover='updateImage(image)'>
   	<div>{{ name }}</div>
 
   	<select v-model='ticketsToBuy'>

@@ -21,11 +21,11 @@
             <h2>
               {{ title.split('').join('-') }} <span v-if="soldOut">sold</span>
             </h2>
-            <p v-if="tickets > 15">On sale now!</p>
+            <!-- <p v-if="tickets > 15">On sale now!</p>
             <p v-else-if="tickets <= 15 && tickets > 0">
               Tickets are running log! Only {{tickets}} left.
             </p>
-            <p v-else>Sorry. We're sold out.</p>
+            <p v-else>Sorry. We're sold out.</p> -->
             <ul>
               <li v-for="(detail, index) in details" :key="detail">
                 {{index}} - {{detail}}
@@ -40,6 +40,8 @@
                 :name="type.name"
                 :image="type.image"
                 :tickets="type.tickets"
+                @buy-tickets="buyTickets"
+                @update-image="updateImage"
               />
             </ul>
           </div>

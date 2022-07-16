@@ -40,6 +40,9 @@ const app = Vue.createApp({
     updateImage(image) {
       this.image = image;
     },
+    buyTickets(num) {
+      this.cart += num;
+    },
   },
   computed: {
     soldOut() {

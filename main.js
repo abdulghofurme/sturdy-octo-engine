@@ -6,26 +6,7 @@ const app = Vue.createApp({
       details: ["Funny comics", "Mime artistry", "Satire", "Sketches"],
       tickets: 20,
       cart: 0,
-      ticketTypes: [
-        {
-          id: "bronze",
-          name: "Bronze",
-          image: faker.image.image(200, 200, true),
-          tickets: 100,
-        },
-        {
-          id: "silver",
-          name: "Silver",
-          image: faker.image.image(200, 200, true),
-          tickets: 50,
-        },
-        {
-          id: "gold",
-          name: "Gold",
-          image: faker.image.image(200, 200, true),
-          tickets: 20,
-        },
-      ],
+      ticketTypes: [],
       soldOutClass: "sold-out",
       hiddenClass: "hidden",
       hidden: false,
@@ -48,5 +29,14 @@ const app = Vue.createApp({
     soldOut() {
       return this.tickets === 0;
     },
+  },
+  mounted() {
+    fetch(
+      "https://raw.githubusercontent.com/abdulghofurme/sturdy-octo-engine/master/ticketTypes.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.ticketTypes = data;
+      });
   },
 });

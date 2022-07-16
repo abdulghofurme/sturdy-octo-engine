@@ -1,0 +1,20 @@
+[
+	{
+		"id": "bronze",
+		"name": "Bronze",
+		"image": "https://picsum.photos/id/237/200",
+		"tickets": 100
+	},
+	{
+		"id": "silver",
+		"name": "Silver",
+		"image": "https://picsum.photos/id/247/200",
+		"tickets": 50
+	},
+	{
+		"id": "gold",
+		"name": "Gold",
+		"image": "https://picsum.photos/id/217/200",
+		"tickets": 20
+	}
+]

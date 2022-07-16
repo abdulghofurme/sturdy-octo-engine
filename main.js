@@ -11,6 +11,7 @@ const app = Vue.createApp({
       hiddenClass: "hidden",
       hidden: false,
       message: "",
+      isError: false,
     };
   },
   methods: {
@@ -37,6 +38,9 @@ const app = Vue.createApp({
       .then((response) => response.json())
       .then((data) => {
         this.ticketTypes = data;
+      })
+      .catch((error) => {
+        this.isError = true;
       });
   },
 });

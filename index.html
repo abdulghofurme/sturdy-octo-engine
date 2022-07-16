@@ -33,7 +33,8 @@
             </ul>
             <input v-model="message" placeholder="Message" />
             <p>Your message: {{message}}</p>
-            <ul class="ticket__types">
+            <p v-if="isError">Sorry we're getting error.</p>
+            <ul v-if="!isError" class="ticket__types">
               <ticket-details
                 v-for="type in ticketTypes"
                 :key="type.id"
